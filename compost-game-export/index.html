@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Template</title>
+        <meta charset="UTF-8">
+        <script src="coi-serviceworker.js"></script>
+        <style>
+            body {
+                background: sandybrown;
+                padding: 32px;
+                display: flex;
+                margin: 0;
+                flex-direction: column;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header, footer {
+                width: 100%;
+                text-align: center;
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            #game {
+                width: 100%;
+                height: 90%;
+                overflow: hidden;
+                margin: 16px 0 16px 0;
+            }
+            #canvas {
+                position: relative !important;
+                display: block;
+                width: 100% !important;
+            }
+            .boxcontainer {
+                width: 90vw;
+                display: flex;
+                gap: 16px;
+                align-items: stretch;
+                flex-direction: row;
+            }
+            .infobox {
+                flex: 1;
+                background: white;
+                border-radius: 16px;
+                padding: 8px;
+                border: 2px solid black;
+            }
+            a {
+                font-weight: bold;
+                color: navy;
+            }
+            a:hover {
+                color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Composting Game</h1>
+            <p>This is a basic game where the objective is to compost. You can grow food, cook dishes, and compost the resulting waste in order to grow more food more quickly. You make money both selling items directly and fulfilling orders. Different tabs in the game contain different parts, such as "crafting" for cooking dishes and "orders" for orders.</p>
+            <p>Many things have tooltips that appear to explain them when hovered on for a couple of seconds.</p>
+        </header>
+        <div class="boxcontainer">
+            <div class="infobox">
+                <h2>What is composting?</h2>
+                <p>Composting is the breaking down of organic waste such as food scraps and garden waste by microbes into a natural fertiliser. It requires some learning and work to begin doing, but provides several benefits. There are plenty of ways to learn how, and even to get composting equipment at a significantly reduced price in some areas. This game is intended to be a fun way for the player to make use of composting.</p>
+            </div>
+            <div class="infobox">
+                <h2>Why compost?</h2>
+                <p>Composting helps you to grow food and plants in your own backyard by providing a natural fertiliser for them. Importantly, every bit of waste you compost is one bit of waste that isn't ending up in a landfill. Composting breaks down compostable natural waste much faster than landfills do, and provides actual benefit for doing so. On a larger scale, composting can reduce reliance on synthetic fertilisers whose downsides include <a href="https://www.rnz.co.nz/news/health/581910/what-s-really-going-on-with-canterbury-s-water">nitrate pollution in waterways</a> and <a href="https://www.theguardian.com/world/2026/mar/14/global-food-supplies-iran-war-fertiliser-yara-svein-tore-holsether">reliance on imports</a> (such as through the Strait of Hormuz)</p>
+            </div>
+        </div>
+        <div id="game">
+            <canvas id="canvas"></canvas>
+        </div>
+        <footer>
+            <p>If you are interested in composting and live in Auckland, you can visit <a href="https://compostcollective.org.nz/">Compost Collective</a>. Compost collective offers coupons for composting bins to anyone who participates in a free composting course, so this is a great opportunity for you!</p>
+            <p>Another great resource for composting in New Zealand is <a href="https://lovefoodhatewaste.co.nz">Love Food Hate Waste</a>.</p>
+        </footer>
+        <script src="index.js"></script>
+        <script>
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":114936,"index.wasm":38820072},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4});
+            engine.startGame();
+        </script>
+    </body>
+</html>
+
